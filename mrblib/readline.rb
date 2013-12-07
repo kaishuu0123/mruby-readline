@@ -6,8 +6,6 @@ module Readline
   end
 
   def self.readline(prompt = "", add_hist = false)
-    p self.completion_proc
-
     line = Readline._c_readline(prompt, add_hist)
 
     if add_hist
